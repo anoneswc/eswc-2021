@@ -1,3 +1,5 @@
+# Abstract 
+
 In  this  paper,  we  present  a  knowledge  graph  managementsystem that handles data streams at the edge of a computing infrastruc-ture. Such systems are needed for anomaly and risk detection in differentkinds  of  plants  or  building  equipped  with  sensors  and  actuators.  Thelimitations,e.g.,  constrained  computing  power  and  storage  space,  andexpectations,e.g., low latency, high throughput and smart data manage-ment, of Edge computing have been considered during the design phase ofour prototype. As a result, our system, named Streaming SuccinctEdge,adopts a compact, in-memory, streaming-enabled RDF management thatsupports continuous SPARQL queries and RDFS reasoning. We demon-strate its correctness, latency and throughput properties on real-worlduse cases originating from an energy management IoT setting.
 
 https://arxiv.org/abs/2012.07108
