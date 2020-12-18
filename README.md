@@ -62,7 +62,9 @@ Up to two of these
 
 SuccinctEdge's code is found in directory eswc-2021\SuccinctEdge\
 
-First you must have the sdsl library installed, found here https://github.com/simongog/sdsl-lite
+First you must have the sdsl library installed in /usr/local/., found here https://github.com/simongog/sdsl-lite
+CMake version 3.14 is required, if there is a version problem, users may change the version number in CMakeLists.txt directly. 
+This configuration has already been tested with Raspbian and MacOS.
 
 run these commands to compile the code:
 
