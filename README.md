@@ -1,4 +1,12 @@
+In  this  paper,  we  present  a  knowledge  graph  managementsystem that handles data streams at the edge of a computing infrastruc-ture. Such systems are needed for anomaly and risk detection in differentkinds  of  plants  or  building  equipped  with  sensors  and  actuators.  Thelimitations,e.g.,  constrained  computing  power  and  storage  space,  andexpectations,e.g., low latency, high throughput and smart data manage-ment, of Edge computing have been considered during the design phase ofour prototype. As a result, our system, named Streaming SuccinctEdge,adopts a compact, in-memory, streaming-enabled RDF management thatsupports continuous SPARQL queries and RDFS reasoning. We demon-strate its correctness, latency and throughput properties on real-worlduse cases originating from an energy management IoT setting.
+
+https://arxiv.org/abs/2012.07108
+
+
+
 # Commands to Run Edgent
+
+The jar is found in edgent
 
 java -jar edgent-succinct.jar [Options]
 
@@ -53,7 +61,23 @@ Up to two of these
 
 First you must have the sdsl library installed, found here https://github.com/simongog/sdsl-lite
 
+run these commands to compile the code:
+
+```
+cmake ./
+make
+```
+
+### Run
+
+to run Succinct with Edgent in stream or aggregate mode:
+
+```
 ./SuccinctEdge_cata ./test_data/sensor_test.nt ./test_query/sensor_test.sparql ./store/sensor_test/ ./simu_tbox/ false true true
+```
 
 if you want to run Edgent with option -b, you must run SuccinctEdge with the following command:
+
+```
 ./SuccinctEdge_cata ./test_data/sensor_test.nt ./test_query/sensor_test.sparql ./store/sensor_test/ ./simu_tbox/ false true true true
+```
