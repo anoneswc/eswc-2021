@@ -8,7 +8,7 @@ https://arxiv.org/abs/2012.07108
 
 # Commands to Run Edgent
 
-The jar is found in edgent
+The jar is found in eswc-2021\Edgent\out\artifacts\edgent_succinct_jar
 
 java -jar edgent-succinct.jar [Options]
 
