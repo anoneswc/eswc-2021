@@ -5,7 +5,6 @@ In  this  paper,  we  present  a  knowledge  graph  managementsystem that handle
 https://arxiv.org/abs/2012.07108
 
 
-
 # Commands to Run Edgent
 
 The jar is found in eswc-2021\Edgent\out\artifacts\edgent_succinct_jar
@@ -61,6 +60,8 @@ Up to two of these
 
 # Commands to run SuccinctEdge
 
+SuccinctEdge's code is found in directory eswc-2021\SuccinctEdge\
+
 First you must have the sdsl library installed, found here https://github.com/simongog/sdsl-lite
 
 run these commands to compile the code:
@@ -72,6 +73,7 @@ make
 
 ### Run
 
+Make sure that Edgent is running before running Succinct.
 to run Succinct with Edgent in stream or aggregate mode:
 
 ```
