@@ -4,31 +4,34 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/Users/xu/Documents/Doctorat/git_workplace/SuccinctEdge_sensors_new/BitMap.cpp" "/Users/xu/Documents/Doctorat/git_workplace/SuccinctEdge_sensors_new/cmake-build-debug/CMakeFiles/SuccinctEdge_cata.dir/BitMap.cpp.o"
-  "/Users/xu/Documents/Doctorat/git_workplace/SuccinctEdge_sensors_new/DataBlock.cpp" "/Users/xu/Documents/Doctorat/git_workplace/SuccinctEdge_sensors_new/cmake-build-debug/CMakeFiles/SuccinctEdge_cata.dir/DataBlock.cpp.o"
-  "/Users/xu/Documents/Doctorat/git_workplace/SuccinctEdge_sensors_new/DataSeries.cpp" "/Users/xu/Documents/Doctorat/git_workplace/SuccinctEdge_sensors_new/cmake-build-debug/CMakeFiles/SuccinctEdge_cata.dir/DataSeries.cpp.o"
-  "/Users/xu/Documents/Doctorat/git_workplace/SuccinctEdge_sensors_new/DataTypeStore.cpp" "/Users/xu/Documents/Doctorat/git_workplace/SuccinctEdge_sensors_new/cmake-build-debug/CMakeFiles/SuccinctEdge_cata.dir/DataTypeStore.cpp.o"
-  "/Users/xu/Documents/Doctorat/git_workplace/SuccinctEdge_sensors_new/Dictionary.cpp" "/Users/xu/Documents/Doctorat/git_workplace/SuccinctEdge_sensors_new/cmake-build-debug/CMakeFiles/SuccinctEdge_cata.dir/Dictionary.cpp.o"
-  "/Users/xu/Documents/Doctorat/git_workplace/SuccinctEdge_sensors_new/JoinLine.cpp" "/Users/xu/Documents/Doctorat/git_workplace/SuccinctEdge_sensors_new/cmake-build-debug/CMakeFiles/SuccinctEdge_cata.dir/JoinLine.cpp.o"
-  "/Users/xu/Documents/Doctorat/git_workplace/SuccinctEdge_sensors_new/JoinTable.cpp" "/Users/xu/Documents/Doctorat/git_workplace/SuccinctEdge_sensors_new/cmake-build-debug/CMakeFiles/SuccinctEdge_cata.dir/JoinTable.cpp.o"
-  "/Users/xu/Documents/Doctorat/git_workplace/SuccinctEdge_sensors_new/JoinVariables.cpp" "/Users/xu/Documents/Doctorat/git_workplace/SuccinctEdge_sensors_new/cmake-build-debug/CMakeFiles/SuccinctEdge_cata.dir/JoinVariables.cpp.o"
-  "/Users/xu/Documents/Doctorat/git_workplace/SuccinctEdge_sensors_new/LiteMatDictionary.cpp" "/Users/xu/Documents/Doctorat/git_workplace/SuccinctEdge_sensors_new/cmake-build-debug/CMakeFiles/SuccinctEdge_cata.dir/LiteMatDictionary.cpp.o"
-  "/Users/xu/Documents/Doctorat/git_workplace/SuccinctEdge_sensors_new/PropertyLiteMatDictionary.cpp" "/Users/xu/Documents/Doctorat/git_workplace/SuccinctEdge_sensors_new/cmake-build-debug/CMakeFiles/SuccinctEdge_cata.dir/PropertyLiteMatDictionary.cpp.o"
-  "/Users/xu/Documents/Doctorat/git_workplace/SuccinctEdge_sensors_new/QueryEngine.cpp" "/Users/xu/Documents/Doctorat/git_workplace/SuccinctEdge_sensors_new/cmake-build-debug/CMakeFiles/SuccinctEdge_cata.dir/QueryEngine.cpp.o"
-  "/Users/xu/Documents/Doctorat/git_workplace/SuccinctEdge_sensors_new/RDFStorage.cpp" "/Users/xu/Documents/Doctorat/git_workplace/SuccinctEdge_sensors_new/cmake-build-debug/CMakeFiles/SuccinctEdge_cata.dir/RDFStorage.cpp.o"
-  "/Users/xu/Documents/Doctorat/git_workplace/SuccinctEdge_sensors_new/RDFTypeStore.cpp" "/Users/xu/Documents/Doctorat/git_workplace/SuccinctEdge_sensors_new/cmake-build-debug/CMakeFiles/SuccinctEdge_cata.dir/RDFTypeStore.cpp.o"
-  "/Users/xu/Documents/Doctorat/git_workplace/SuccinctEdge_sensors_new/RankBaseElement.cpp" "/Users/xu/Documents/Doctorat/git_workplace/SuccinctEdge_sensors_new/cmake-build-debug/CMakeFiles/SuccinctEdge_cata.dir/RankBaseElement.cpp.o"
-  "/Users/xu/Documents/Doctorat/git_workplace/SuccinctEdge_sensors_new/StrDataRankBaseElement.cpp" "/Users/xu/Documents/Doctorat/git_workplace/SuccinctEdge_sensors_new/cmake-build-debug/CMakeFiles/SuccinctEdge_cata.dir/StrDataRankBaseElement.cpp.o"
-  "/Users/xu/Documents/Doctorat/git_workplace/SuccinctEdge_sensors_new/TCPReceiver.cpp" "/Users/xu/Documents/Doctorat/git_workplace/SuccinctEdge_sensors_new/cmake-build-debug/CMakeFiles/SuccinctEdge_cata.dir/TCPReceiver.cpp.o"
-  "/Users/xu/Documents/Doctorat/git_workplace/SuccinctEdge_sensors_new/TriplePattern.cpp" "/Users/xu/Documents/Doctorat/git_workplace/SuccinctEdge_sensors_new/cmake-build-debug/CMakeFiles/SuccinctEdge_cata.dir/TriplePattern.cpp.o"
-  "/Users/xu/Documents/Doctorat/git_workplace/SuccinctEdge_sensors_new/TripleStore.cpp" "/Users/xu/Documents/Doctorat/git_workplace/SuccinctEdge_sensors_new/cmake-build-debug/CMakeFiles/SuccinctEdge_cata.dir/TripleStore.cpp.o"
-  "/Users/xu/Documents/Doctorat/git_workplace/SuccinctEdge_sensors_new/main.cpp" "/Users/xu/Documents/Doctorat/git_workplace/SuccinctEdge_sensors_new/cmake-build-debug/CMakeFiles/SuccinctEdge_cata.dir/main.cpp.o"
+  "C:/Users/pasyj/Documents/edgent/SuccinctEdgePrivate/BitMap.cpp" "C:/Users/pasyj/Documents/edgent/SuccinctEdgePrivate/cmake-build-debug/CMakeFiles/SuccinctEdge_cata.dir/BitMap.cpp.obj"
+  "C:/Users/pasyj/Documents/edgent/SuccinctEdgePrivate/DataBlock.cpp" "C:/Users/pasyj/Documents/edgent/SuccinctEdgePrivate/cmake-build-debug/CMakeFiles/SuccinctEdge_cata.dir/DataBlock.cpp.obj"
+  "C:/Users/pasyj/Documents/edgent/SuccinctEdgePrivate/DataSeries.cpp" "C:/Users/pasyj/Documents/edgent/SuccinctEdgePrivate/cmake-build-debug/CMakeFiles/SuccinctEdge_cata.dir/DataSeries.cpp.obj"
+  "C:/Users/pasyj/Documents/edgent/SuccinctEdgePrivate/DataTypeStore.cpp" "C:/Users/pasyj/Documents/edgent/SuccinctEdgePrivate/cmake-build-debug/CMakeFiles/SuccinctEdge_cata.dir/DataTypeStore.cpp.obj"
+  "C:/Users/pasyj/Documents/edgent/SuccinctEdgePrivate/Dictionary.cpp" "C:/Users/pasyj/Documents/edgent/SuccinctEdgePrivate/cmake-build-debug/CMakeFiles/SuccinctEdge_cata.dir/Dictionary.cpp.obj"
+  "C:/Users/pasyj/Documents/edgent/SuccinctEdgePrivate/JoinLine.cpp" "C:/Users/pasyj/Documents/edgent/SuccinctEdgePrivate/cmake-build-debug/CMakeFiles/SuccinctEdge_cata.dir/JoinLine.cpp.obj"
+  "C:/Users/pasyj/Documents/edgent/SuccinctEdgePrivate/JoinTable.cpp" "C:/Users/pasyj/Documents/edgent/SuccinctEdgePrivate/cmake-build-debug/CMakeFiles/SuccinctEdge_cata.dir/JoinTable.cpp.obj"
+  "C:/Users/pasyj/Documents/edgent/SuccinctEdgePrivate/JoinVariables.cpp" "C:/Users/pasyj/Documents/edgent/SuccinctEdgePrivate/cmake-build-debug/CMakeFiles/SuccinctEdge_cata.dir/JoinVariables.cpp.obj"
+  "C:/Users/pasyj/Documents/edgent/SuccinctEdgePrivate/LiteMatDictionary.cpp" "C:/Users/pasyj/Documents/edgent/SuccinctEdgePrivate/cmake-build-debug/CMakeFiles/SuccinctEdge_cata.dir/LiteMatDictionary.cpp.obj"
+  "C:/Users/pasyj/Documents/edgent/SuccinctEdgePrivate/PropertyLiteMatDictionary.cpp" "C:/Users/pasyj/Documents/edgent/SuccinctEdgePrivate/cmake-build-debug/CMakeFiles/SuccinctEdge_cata.dir/PropertyLiteMatDictionary.cpp.obj"
+  "C:/Users/pasyj/Documents/edgent/SuccinctEdgePrivate/QueryEngine.cpp" "C:/Users/pasyj/Documents/edgent/SuccinctEdgePrivate/cmake-build-debug/CMakeFiles/SuccinctEdge_cata.dir/QueryEngine.cpp.obj"
+  "C:/Users/pasyj/Documents/edgent/SuccinctEdgePrivate/RDFStorage.cpp" "C:/Users/pasyj/Documents/edgent/SuccinctEdgePrivate/cmake-build-debug/CMakeFiles/SuccinctEdge_cata.dir/RDFStorage.cpp.obj"
+  "C:/Users/pasyj/Documents/edgent/SuccinctEdgePrivate/RDFTypeStore.cpp" "C:/Users/pasyj/Documents/edgent/SuccinctEdgePrivate/cmake-build-debug/CMakeFiles/SuccinctEdge_cata.dir/RDFTypeStore.cpp.obj"
+  "C:/Users/pasyj/Documents/edgent/SuccinctEdgePrivate/RankBaseElement.cpp" "C:/Users/pasyj/Documents/edgent/SuccinctEdgePrivate/cmake-build-debug/CMakeFiles/SuccinctEdge_cata.dir/RankBaseElement.cpp.obj"
+  "C:/Users/pasyj/Documents/edgent/SuccinctEdgePrivate/StrDataRankBaseElement.cpp" "C:/Users/pasyj/Documents/edgent/SuccinctEdgePrivate/cmake-build-debug/CMakeFiles/SuccinctEdge_cata.dir/StrDataRankBaseElement.cpp.obj"
+  "C:/Users/pasyj/Documents/edgent/SuccinctEdgePrivate/TCPReceiver.cpp" "C:/Users/pasyj/Documents/edgent/SuccinctEdgePrivate/cmake-build-debug/CMakeFiles/SuccinctEdge_cata.dir/TCPReceiver.cpp.obj"
+  "C:/Users/pasyj/Documents/edgent/SuccinctEdgePrivate/TriplePattern.cpp" "C:/Users/pasyj/Documents/edgent/SuccinctEdgePrivate/cmake-build-debug/CMakeFiles/SuccinctEdge_cata.dir/TriplePattern.cpp.obj"
+  "C:/Users/pasyj/Documents/edgent/SuccinctEdgePrivate/TripleStore.cpp" "C:/Users/pasyj/Documents/edgent/SuccinctEdgePrivate/cmake-build-debug/CMakeFiles/SuccinctEdge_cata.dir/TripleStore.cpp.obj"
+  "C:/Users/pasyj/Documents/edgent/SuccinctEdgePrivate/main.cpp" "C:/Users/pasyj/Documents/edgent/SuccinctEdgePrivate/cmake-build-debug/CMakeFiles/SuccinctEdge_cata.dir/main.cpp.obj"
   )
-set(CMAKE_CXX_COMPILER_ID "AppleClang")
+set(CMAKE_CXX_COMPILER_ID "GNU")
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "/Users/xu/include"
+  "../usr/include"
+  ".././lib/sdsl-lite-2.1.1/include"
+  ".././lib/mosquitto-master/include"
   )
 
 # Targets to which this target links.

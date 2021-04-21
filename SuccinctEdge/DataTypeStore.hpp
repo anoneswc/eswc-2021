@@ -55,7 +55,9 @@ public:
     void insert_data(vector<long>& data_indexes, vector<double>& data);
     void insert_data(vector<long>& data_indexes, vector<string>& data);
     void drop_data();
+    void drop_data_with_index(long index);
     void drop_all_data();
+    void drop_all_data_with_index(long index);
     void change_mode(int index, data_function function);
     void all_change_mode(data_function function);
 

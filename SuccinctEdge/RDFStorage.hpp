@@ -17,6 +17,7 @@
 #include <fstream>
 #include "Constant.hpp"
 #include <math.h>
+#include <sstream>
 
 using namespace std;
 
@@ -34,6 +35,7 @@ private:
     Dictionary dict_instances;
     PropertyLiteMatDictionary dict_properties;   // Can be optimized with LiteMat
     LiteMatDictionary dict_concepts;  // Can be optimized with LiteMat
+    map<string,vector<long>> topic_cols_map;
 
 
     unsigned long long num_predicate_triples(string predicate);
@@ -45,7 +47,7 @@ private:
     vector<string> find_next_triple_pattern(JoinVariables& variables, vector<vector<string>>& query_table);
     void join(JoinVariables& variables, list<JoinLine>& table_a, vector<string> &triple_pattern);
     //void merge_join(JoinVariables& variables, list<JoinLine>& table_a, vector<string> &triple_pattern);
-    bool has_binding(JoinVariables& variables, vector<string>& tp);
+    int has_binding(JoinVariables& variables, vector<string>& tp);
     int selectivity(vector<string>& t);
     bool merge_join_condition(const vector<string>& variables, const vector<string>& triple_pattern);
 
@@ -99,9 +101,22 @@ public:
         lock.unlock();
     }
 
+
     void insert_numeric_data(vector<long> &data_indexes, vector<string> &data, mutex &lock){
         lock.lock();
         data_triple_store->insert_data(data_indexes, data);
+        lock.unlock();
+    }
+
+    void insert_numeric_data_with_topic(string& topic, vector<double> &data, mutex &lock){
+        lock.lock();
+        data_triple_store->insert_data(topic_cols_map[topic], data);
+        lock.unlock();
+    }
+
+    void insert_numeric_data_with_topic(string& topic, vector<string> &data, mutex &lock){
+        lock.lock();
+        data_triple_store->insert_data(topic_cols_map[topic], data);
         lock.unlock();
     }
 
@@ -111,10 +126,18 @@ public:
         lock.unlock();
     }
 
+    void drop_numeric_data_with_index(long index){
+        data_triple_store->drop_data_with_index(index);
+    }
+
     void drop_all_numeric_data(mutex &lock){
         lock.lock();
         data_triple_store->drop_all_data();
         lock.unlock();
+    }
+
+    void drop_all_numeric_data_with_index(long index){
+        data_triple_store->drop_all_data();
     }
 
     void change_data_mode(int index, data_function function){
@@ -135,6 +158,51 @@ public:
 
     bool data_serie_not_null(long index){
         return data_triple_store->data_serie_not_null(index);
+    }
+
+    void init_topic_cols_map(string &file_path){
+        ifstream input_file(file_path);
+        string str;
+        while(getline(input_file, str, '\n')){
+            string ele, key;
+            vector<string> vec_cols;
+            istringstream line_stream(str);
+            line_stream >> key;
+            while(line_stream >> ele){
+                vec_cols.push_back(ele);
+            }
+            topic_cols_map[key] = get_indexes_with_data_names(vec_cols);
+
+        }
+    }
+
+
+    void check_windows_and_drop_data(long window_size, mutex &lock){
+        map<string,vector<long>>::iterator iter;
+        for(iter = topic_cols_map.begin(); iter != topic_cols_map.end(); ++iter){
+            while(get_data_head_tail_difference_with_index((iter->second)[0]) > window_size){
+                lock.lock();
+                for(long i = 0; i < (iter->second).size(); ++i){
+                    drop_numeric_data_with_index((iter->second)[i]);
+                }
+                lock.unlock();
+            }
+        }
+    }
+
+    void check_windows_and_drop_all_data(long window_size, mutex &lock, bool &tumbling_out_flag){
+        //Tumbling out flag
+        map<string,vector<long>>::iterator iter;
+        for(iter = topic_cols_map.begin(); iter != topic_cols_map.end(); ++iter){
+            if(get_data_head_tail_difference_with_index((iter->second)[0]) >= window_size){
+                tumbling_out_flag = true;
+                while(tumbling_out_flag){
+                    //usleep(100);
+                }
+                drop_all_numeric_data(lock);
+                break;
+            }
+        }
     }
 };
 

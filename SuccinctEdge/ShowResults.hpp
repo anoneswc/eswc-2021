@@ -8,6 +8,7 @@
 #include "JoinVariables.hpp"
 #include "JoinLine.hpp"
 #include "RDFStorage.hpp"
+#include "TCPReceiver.hpp"
 #include <list>
 
 
@@ -19,18 +20,16 @@ void showResults(RDFStorage &test, JoinVariables &variables, list<JoinLine> &res
 
 
         //Anomalie detection, to be improved
-
-        /*
         string data_variable = "?Value";
         long data_index = variables.get_data_index(data_variable);
-        if(stod(*((i.get_vector_of_str())[data_index])) < 5 && stod(*((i.get_vector_of_str())[data_index])) > 4){
-            continue;
-        }
+        
+        //if(stod(*((i.get_vector_of_str())[data_index])) < 5 && stod(*((i.get_vector_of_str())[data_index])) > 4){
+        //    continue;
+        //}
+         
 
-         */
-
-        //long long time = std::chrono::system_clock::now().time_since_epoch() /std::chrono::milliseconds(1);
-        //cout << "latency: " << time - stoll(*i.get_vector_of_str()[variables.get_data_variables_indexes("?TimeStamp")]) << endl;
+        double time = std::chrono::system_clock::now().time_since_epoch() /std::chrono::milliseconds(1);
+        cout << "latency: " << time - stod(*i.get_vector_of_str()[variables.get_data_variables_indexes("?TimeStamp")]) << endl;
 
 
 
@@ -57,6 +56,25 @@ void showResults(RDFStorage &test, JoinVariables &variables, list<JoinLine> &res
 
 
         cout << endl;
+    }
+}
+
+void sendResults(RDFStorage &test, JoinVariables &variables, list<JoinLine> &res_table){
+
+    for (auto i: res_table) {
+
+        //Anomalie detection, to be improved
+        string data_variable = "?Value";
+        long data_index = variables.get_data_index(data_variable);
+        cout << "Received " << *((i.get_vector_of_str())[data_index]) << " and " << *(i.get_vector_of_str()[variables.get_data_variables_indexes("?TimeStamp")]) << endl;
+                
+        std::cout << std::chrono::system_clock::now().time_since_epoch() /std::chrono::milliseconds(1) - time_reception << "ms" << std::endl;
+    
+        if(stod(*((i.get_vector_of_str())[data_index])) < 5 && stod(*((i.get_vector_of_str())[data_index])) > 4)
+            continue;
+        
+        report_anomaly(*i.get_vector_of_str()[variables.get_data_variables_indexes("?TimeStamp")] + "," + *((i.get_vector_of_str())[data_index]));
+
     }
 }
 

@@ -8,215 +8,221 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/Users/xu/Documents/Doctorat/git_workplace/SuccinctEdge_sensors_new/cmake-build-debug"/>
+				<Option working_dir="C:/Users/pasyj/Documents/edgent/SuccinctEdgePrivate/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/xu/Documents/Doctorat/git_workplace/SuccinctEdge_sensors_new/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/xu/Documents/Doctorat/git_workplace/SuccinctEdge_sensors_new/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/xu/Documents/Doctorat/git_workplace/SuccinctEdge_sensors_new/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/xu/Documents/Doctorat/git_workplace/SuccinctEdge_sensors_new/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="rebuild_cache">
-				<Option working_dir="/Users/xu/Documents/Doctorat/git_workplace/SuccinctEdge_sensors_new/cmake-build-debug"/>
-				<Option type="4"/>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/xu/Documents/Doctorat/git_workplace/SuccinctEdge_sensors_new/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/xu/Documents/Doctorat/git_workplace/SuccinctEdge_sensors_new/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/xu/Documents/Doctorat/git_workplace/SuccinctEdge_sensors_new/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/xu/Documents/Doctorat/git_workplace/SuccinctEdge_sensors_new/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/pasyj/Documents/edgent/SuccinctEdgePrivate/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/pasyj/Documents/edgent/SuccinctEdgePrivate/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/pasyj/Documents/edgent/SuccinctEdgePrivate/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/pasyj/Documents/edgent/SuccinctEdgePrivate/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="/Users/xu/Documents/Doctorat/git_workplace/SuccinctEdge_sensors_new/cmake-build-debug"/>
+				<Option working_dir="C:/Users/pasyj/Documents/edgent/SuccinctEdgePrivate/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/xu/Documents/Doctorat/git_workplace/SuccinctEdge_sensors_new/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/xu/Documents/Doctorat/git_workplace/SuccinctEdge_sensors_new/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/xu/Documents/Doctorat/git_workplace/SuccinctEdge_sensors_new/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/xu/Documents/Doctorat/git_workplace/SuccinctEdge_sensors_new/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/pasyj/Documents/edgent/SuccinctEdgePrivate/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/pasyj/Documents/edgent/SuccinctEdgePrivate/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/pasyj/Documents/edgent/SuccinctEdgePrivate/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/pasyj/Documents/edgent/SuccinctEdgePrivate/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="SuccinctEdge_cata">
-				<Option output="/Users/xu/Documents/Doctorat/git_workplace/SuccinctEdge_sensors_new/cmake-build-debug/SuccinctEdge_cata" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/xu/Documents/Doctorat/git_workplace/SuccinctEdge_sensors_new/cmake-build-debug"/>
+				<Option output="C:/Users/pasyj/Documents/edgent/SuccinctEdgePrivate/cmake-build-debug/SuccinctEdge_cata.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/pasyj/Documents/edgent/SuccinctEdgePrivate/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
 					<Add directory="/Users/xu/include"/>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include"/>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/12.0.0/include"/>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
-					<Add directory="/System/Library/Frameworks"/>
-					<Add directory="/Library/Frameworks"/>
+					<Add directory="C:/Users/pasyj/Documents/edgent/SuccinctEdgePrivate/usr/include"/>
+					<Add directory="C:/Users/pasyj/Documents/edgent/SuccinctEdgePrivate/./lib/sdsl-lite-2.1.1/include"/>
+					<Add directory="C:/Users/pasyj/Documents/edgent/SuccinctEdgePrivate/./lib/mosquitto-master/include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++/mingw32"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++/backward"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/../../../../include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include-fixed"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/../../../../mingw32/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/xu/Documents/Doctorat/git_workplace/SuccinctEdge_sensors_new/cmake-build-debug/Makefile&quot;  VERBOSE=1 SuccinctEdge_cata"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/xu/Documents/Doctorat/git_workplace/SuccinctEdge_sensors_new/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/xu/Documents/Doctorat/git_workplace/SuccinctEdge_sensors_new/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/xu/Documents/Doctorat/git_workplace/SuccinctEdge_sensors_new/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/pasyj/Documents/edgent/SuccinctEdgePrivate/cmake-build-debug/Makefile&quot;  VERBOSE=1 SuccinctEdge_cata"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/pasyj/Documents/edgent/SuccinctEdgePrivate/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/pasyj/Documents/edgent/SuccinctEdgePrivate/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/pasyj/Documents/edgent/SuccinctEdgePrivate/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="SuccinctEdge_cata/fast">
-				<Option output="/Users/xu/Documents/Doctorat/git_workplace/SuccinctEdge_sensors_new/cmake-build-debug/SuccinctEdge_cata" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/xu/Documents/Doctorat/git_workplace/SuccinctEdge_sensors_new/cmake-build-debug"/>
+				<Option output="C:/Users/pasyj/Documents/edgent/SuccinctEdgePrivate/cmake-build-debug/SuccinctEdge_cata.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/pasyj/Documents/edgent/SuccinctEdgePrivate/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
 					<Add directory="/Users/xu/include"/>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include"/>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/12.0.0/include"/>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
-					<Add directory="/System/Library/Frameworks"/>
-					<Add directory="/Library/Frameworks"/>
+					<Add directory="C:/Users/pasyj/Documents/edgent/SuccinctEdgePrivate/usr/include"/>
+					<Add directory="C:/Users/pasyj/Documents/edgent/SuccinctEdgePrivate/./lib/sdsl-lite-2.1.1/include"/>
+					<Add directory="C:/Users/pasyj/Documents/edgent/SuccinctEdgePrivate/./lib/mosquitto-master/include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++/mingw32"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++/backward"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/../../../../include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include-fixed"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/../../../../mingw32/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/xu/Documents/Doctorat/git_workplace/SuccinctEdge_sensors_new/cmake-build-debug/Makefile&quot;  VERBOSE=1 SuccinctEdge_cata/fast"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/xu/Documents/Doctorat/git_workplace/SuccinctEdge_sensors_new/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/xu/Documents/Doctorat/git_workplace/SuccinctEdge_sensors_new/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/xu/Documents/Doctorat/git_workplace/SuccinctEdge_sensors_new/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/pasyj/Documents/edgent/SuccinctEdgePrivate/cmake-build-debug/Makefile&quot;  VERBOSE=1 SuccinctEdge_cata/fast"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/pasyj/Documents/edgent/SuccinctEdgePrivate/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/pasyj/Documents/edgent/SuccinctEdgePrivate/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/pasyj/Documents/edgent/SuccinctEdgePrivate/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="C:/Users/pasyj/Documents/edgent/SuccinctEdgePrivate/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/pasyj/Documents/edgent/SuccinctEdgePrivate/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/pasyj/Documents/edgent/SuccinctEdgePrivate/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/pasyj/Documents/edgent/SuccinctEdgePrivate/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/pasyj/Documents/edgent/SuccinctEdgePrivate/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/Users/xu/Documents/Doctorat/git_workplace/SuccinctEdge_sensors_new/BitMap.cpp">
+		<Unit filename="C:/Users/pasyj/Documents/edgent/SuccinctEdgePrivate/BitMap.cpp">
 			<Option target="SuccinctEdge_cata"/>
 		</Unit>
-		<Unit filename="/Users/xu/Documents/Doctorat/git_workplace/SuccinctEdge_sensors_new/BitMap.hpp">
+		<Unit filename="C:/Users/pasyj/Documents/edgent/SuccinctEdgePrivate/BitMap.hpp">
 			<Option target="SuccinctEdge_cata"/>
 		</Unit>
-		<Unit filename="/Users/xu/Documents/Doctorat/git_workplace/SuccinctEdge_sensors_new/Constant.hpp">
+		<Unit filename="C:/Users/pasyj/Documents/edgent/SuccinctEdgePrivate/Constant.hpp">
 			<Option target="SuccinctEdge_cata"/>
 		</Unit>
-		<Unit filename="/Users/xu/Documents/Doctorat/git_workplace/SuccinctEdge_sensors_new/DataBlock.cpp">
+		<Unit filename="C:/Users/pasyj/Documents/edgent/SuccinctEdgePrivate/DataBlock.cpp">
 			<Option target="SuccinctEdge_cata"/>
 		</Unit>
-		<Unit filename="/Users/xu/Documents/Doctorat/git_workplace/SuccinctEdge_sensors_new/DataBlock.hpp">
+		<Unit filename="C:/Users/pasyj/Documents/edgent/SuccinctEdgePrivate/DataBlock.hpp">
 			<Option target="SuccinctEdge_cata"/>
 		</Unit>
-		<Unit filename="/Users/xu/Documents/Doctorat/git_workplace/SuccinctEdge_sensors_new/DataSeries.cpp">
+		<Unit filename="C:/Users/pasyj/Documents/edgent/SuccinctEdgePrivate/DataSeries.cpp">
 			<Option target="SuccinctEdge_cata"/>
 		</Unit>
-		<Unit filename="/Users/xu/Documents/Doctorat/git_workplace/SuccinctEdge_sensors_new/DataSeries.hpp">
+		<Unit filename="C:/Users/pasyj/Documents/edgent/SuccinctEdgePrivate/DataSeries.hpp">
 			<Option target="SuccinctEdge_cata"/>
 		</Unit>
-		<Unit filename="/Users/xu/Documents/Doctorat/git_workplace/SuccinctEdge_sensors_new/DataTypeStore.cpp">
+		<Unit filename="C:/Users/pasyj/Documents/edgent/SuccinctEdgePrivate/DataTypeStore.cpp">
 			<Option target="SuccinctEdge_cata"/>
 		</Unit>
-		<Unit filename="/Users/xu/Documents/Doctorat/git_workplace/SuccinctEdge_sensors_new/DataTypeStore.hpp">
+		<Unit filename="C:/Users/pasyj/Documents/edgent/SuccinctEdgePrivate/DataTypeStore.hpp">
 			<Option target="SuccinctEdge_cata"/>
 		</Unit>
-		<Unit filename="/Users/xu/Documents/Doctorat/git_workplace/SuccinctEdge_sensors_new/DataWindowUtil.hpp">
+		<Unit filename="C:/Users/pasyj/Documents/edgent/SuccinctEdgePrivate/DataWindowUtil.hpp">
 			<Option target="SuccinctEdge_cata"/>
 		</Unit>
-		<Unit filename="/Users/xu/Documents/Doctorat/git_workplace/SuccinctEdge_sensors_new/Dictionary.cpp">
+		<Unit filename="C:/Users/pasyj/Documents/edgent/SuccinctEdgePrivate/Dictionary.cpp">
 			<Option target="SuccinctEdge_cata"/>
 		</Unit>
-		<Unit filename="/Users/xu/Documents/Doctorat/git_workplace/SuccinctEdge_sensors_new/Dictionary.hpp">
+		<Unit filename="C:/Users/pasyj/Documents/edgent/SuccinctEdgePrivate/Dictionary.hpp">
 			<Option target="SuccinctEdge_cata"/>
 		</Unit>
-		<Unit filename="/Users/xu/Documents/Doctorat/git_workplace/SuccinctEdge_sensors_new/JoinLine.cpp">
+		<Unit filename="C:/Users/pasyj/Documents/edgent/SuccinctEdgePrivate/JoinLine.cpp">
 			<Option target="SuccinctEdge_cata"/>
 		</Unit>
-		<Unit filename="/Users/xu/Documents/Doctorat/git_workplace/SuccinctEdge_sensors_new/JoinLine.hpp">
+		<Unit filename="C:/Users/pasyj/Documents/edgent/SuccinctEdgePrivate/JoinLine.hpp">
 			<Option target="SuccinctEdge_cata"/>
 		</Unit>
-		<Unit filename="/Users/xu/Documents/Doctorat/git_workplace/SuccinctEdge_sensors_new/JoinTable.cpp">
+		<Unit filename="C:/Users/pasyj/Documents/edgent/SuccinctEdgePrivate/JoinTable.cpp">
 			<Option target="SuccinctEdge_cata"/>
 		</Unit>
-		<Unit filename="/Users/xu/Documents/Doctorat/git_workplace/SuccinctEdge_sensors_new/JoinTable.hpp">
+		<Unit filename="C:/Users/pasyj/Documents/edgent/SuccinctEdgePrivate/JoinTable.hpp">
 			<Option target="SuccinctEdge_cata"/>
 		</Unit>
-		<Unit filename="/Users/xu/Documents/Doctorat/git_workplace/SuccinctEdge_sensors_new/JoinVariables.cpp">
+		<Unit filename="C:/Users/pasyj/Documents/edgent/SuccinctEdgePrivate/JoinVariables.cpp">
 			<Option target="SuccinctEdge_cata"/>
 		</Unit>
-		<Unit filename="/Users/xu/Documents/Doctorat/git_workplace/SuccinctEdge_sensors_new/JoinVariables.hpp">
+		<Unit filename="C:/Users/pasyj/Documents/edgent/SuccinctEdgePrivate/JoinVariables.hpp">
 			<Option target="SuccinctEdge_cata"/>
 		</Unit>
-		<Unit filename="/Users/xu/Documents/Doctorat/git_workplace/SuccinctEdge_sensors_new/LiteMatDictionary.cpp">
+		<Unit filename="C:/Users/pasyj/Documents/edgent/SuccinctEdgePrivate/LiteMatDictionary.cpp">
 			<Option target="SuccinctEdge_cata"/>
 		</Unit>
-		<Unit filename="/Users/xu/Documents/Doctorat/git_workplace/SuccinctEdge_sensors_new/LiteMatDictionary.hpp">
+		<Unit filename="C:/Users/pasyj/Documents/edgent/SuccinctEdgePrivate/LiteMatDictionary.hpp">
 			<Option target="SuccinctEdge_cata"/>
 		</Unit>
-		<Unit filename="/Users/xu/Documents/Doctorat/git_workplace/SuccinctEdge_sensors_new/MiniBatchUtil.hpp">
+		<Unit filename="C:/Users/pasyj/Documents/edgent/SuccinctEdgePrivate/MiniBatchUtil.hpp">
 			<Option target="SuccinctEdge_cata"/>
 		</Unit>
-		<Unit filename="/Users/xu/Documents/Doctorat/git_workplace/SuccinctEdge_sensors_new/PropertyLiteMatDictionary.cpp">
+		<Unit filename="C:/Users/pasyj/Documents/edgent/SuccinctEdgePrivate/PropertyLiteMatDictionary.cpp">
 			<Option target="SuccinctEdge_cata"/>
 		</Unit>
-		<Unit filename="/Users/xu/Documents/Doctorat/git_workplace/SuccinctEdge_sensors_new/PropertyLiteMatDictionary.hpp">
+		<Unit filename="C:/Users/pasyj/Documents/edgent/SuccinctEdgePrivate/PropertyLiteMatDictionary.hpp">
 			<Option target="SuccinctEdge_cata"/>
 		</Unit>
-		<Unit filename="/Users/xu/Documents/Doctorat/git_workplace/SuccinctEdge_sensors_new/QueryEngine.cpp">
+		<Unit filename="C:/Users/pasyj/Documents/edgent/SuccinctEdgePrivate/QueryEngine.cpp">
 			<Option target="SuccinctEdge_cata"/>
 		</Unit>
-		<Unit filename="/Users/xu/Documents/Doctorat/git_workplace/SuccinctEdge_sensors_new/QueryEngine.hpp">
+		<Unit filename="C:/Users/pasyj/Documents/edgent/SuccinctEdgePrivate/QueryEngine.hpp">
 			<Option target="SuccinctEdge_cata"/>
 		</Unit>
-		<Unit filename="/Users/xu/Documents/Doctorat/git_workplace/SuccinctEdge_sensors_new/RDFStorage.cpp">
+		<Unit filename="C:/Users/pasyj/Documents/edgent/SuccinctEdgePrivate/RDFStorage.cpp">
 			<Option target="SuccinctEdge_cata"/>
 		</Unit>
-		<Unit filename="/Users/xu/Documents/Doctorat/git_workplace/SuccinctEdge_sensors_new/RDFStorage.hpp">
+		<Unit filename="C:/Users/pasyj/Documents/edgent/SuccinctEdgePrivate/RDFStorage.hpp">
 			<Option target="SuccinctEdge_cata"/>
 		</Unit>
-		<Unit filename="/Users/xu/Documents/Doctorat/git_workplace/SuccinctEdge_sensors_new/RDFTypeStore.cpp">
+		<Unit filename="C:/Users/pasyj/Documents/edgent/SuccinctEdgePrivate/RDFTypeStore.cpp">
 			<Option target="SuccinctEdge_cata"/>
 		</Unit>
-		<Unit filename="/Users/xu/Documents/Doctorat/git_workplace/SuccinctEdge_sensors_new/RDFTypeStore.hpp">
+		<Unit filename="C:/Users/pasyj/Documents/edgent/SuccinctEdgePrivate/RDFTypeStore.hpp">
 			<Option target="SuccinctEdge_cata"/>
 		</Unit>
-		<Unit filename="/Users/xu/Documents/Doctorat/git_workplace/SuccinctEdge_sensors_new/RankBaseElement.cpp">
+		<Unit filename="C:/Users/pasyj/Documents/edgent/SuccinctEdgePrivate/RankBaseElement.cpp">
 			<Option target="SuccinctEdge_cata"/>
 		</Unit>
-		<Unit filename="/Users/xu/Documents/Doctorat/git_workplace/SuccinctEdge_sensors_new/RankBaseElement.hpp">
+		<Unit filename="C:/Users/pasyj/Documents/edgent/SuccinctEdgePrivate/RankBaseElement.hpp">
 			<Option target="SuccinctEdge_cata"/>
 		</Unit>
-		<Unit filename="/Users/xu/Documents/Doctorat/git_workplace/SuccinctEdge_sensors_new/ShowResults.hpp">
+		<Unit filename="C:/Users/pasyj/Documents/edgent/SuccinctEdgePrivate/ShowResults.hpp">
 			<Option target="SuccinctEdge_cata"/>
 		</Unit>
-		<Unit filename="/Users/xu/Documents/Doctorat/git_workplace/SuccinctEdge_sensors_new/StrDataRankBaseElement.cpp">
+		<Unit filename="C:/Users/pasyj/Documents/edgent/SuccinctEdgePrivate/StrDataRankBaseElement.cpp">
 			<Option target="SuccinctEdge_cata"/>
 		</Unit>
-		<Unit filename="/Users/xu/Documents/Doctorat/git_workplace/SuccinctEdge_sensors_new/StrDataRankBaseElement.hpp">
+		<Unit filename="C:/Users/pasyj/Documents/edgent/SuccinctEdgePrivate/StrDataRankBaseElement.hpp">
 			<Option target="SuccinctEdge_cata"/>
 		</Unit>
-		<Unit filename="/Users/xu/Documents/Doctorat/git_workplace/SuccinctEdge_sensors_new/TCPReceiver.cpp">
+		<Unit filename="C:/Users/pasyj/Documents/edgent/SuccinctEdgePrivate/TCPReceiver.cpp">
 			<Option target="SuccinctEdge_cata"/>
 		</Unit>
-		<Unit filename="/Users/xu/Documents/Doctorat/git_workplace/SuccinctEdge_sensors_new/TCPReceiver.hpp">
+		<Unit filename="C:/Users/pasyj/Documents/edgent/SuccinctEdgePrivate/TCPReceiver.hpp">
 			<Option target="SuccinctEdge_cata"/>
 		</Unit>
-		<Unit filename="/Users/xu/Documents/Doctorat/git_workplace/SuccinctEdge_sensors_new/TimeUtil.hpp">
+		<Unit filename="C:/Users/pasyj/Documents/edgent/SuccinctEdgePrivate/TimeUtil.hpp">
 			<Option target="SuccinctEdge_cata"/>
 		</Unit>
-		<Unit filename="/Users/xu/Documents/Doctorat/git_workplace/SuccinctEdge_sensors_new/TriplePattern.cpp">
+		<Unit filename="C:/Users/pasyj/Documents/edgent/SuccinctEdgePrivate/TriplePattern.cpp">
 			<Option target="SuccinctEdge_cata"/>
 		</Unit>
-		<Unit filename="/Users/xu/Documents/Doctorat/git_workplace/SuccinctEdge_sensors_new/TriplePattern.hpp">
+		<Unit filename="C:/Users/pasyj/Documents/edgent/SuccinctEdgePrivate/TriplePattern.hpp">
 			<Option target="SuccinctEdge_cata"/>
 		</Unit>
-		<Unit filename="/Users/xu/Documents/Doctorat/git_workplace/SuccinctEdge_sensors_new/TripleStore.cpp">
+		<Unit filename="C:/Users/pasyj/Documents/edgent/SuccinctEdgePrivate/TripleStore.cpp">
 			<Option target="SuccinctEdge_cata"/>
 		</Unit>
-		<Unit filename="/Users/xu/Documents/Doctorat/git_workplace/SuccinctEdge_sensors_new/TripleStore.hpp">
+		<Unit filename="C:/Users/pasyj/Documents/edgent/SuccinctEdgePrivate/TripleStore.hpp">
 			<Option target="SuccinctEdge_cata"/>
 		</Unit>
-		<Unit filename="/Users/xu/Documents/Doctorat/git_workplace/SuccinctEdge_sensors_new/Util.hpp">
+		<Unit filename="C:/Users/pasyj/Documents/edgent/SuccinctEdgePrivate/Util.hpp">
 			<Option target="SuccinctEdge_cata"/>
 		</Unit>
-		<Unit filename="/Users/xu/Documents/Doctorat/git_workplace/SuccinctEdge_sensors_new/main.cpp">
+		<Unit filename="C:/Users/pasyj/Documents/edgent/SuccinctEdgePrivate/main.cpp">
 			<Option target="SuccinctEdge_cata"/>
 		</Unit>
-		<Unit filename="/Users/xu/Documents/Doctorat/git_workplace/SuccinctEdge_sensors_new/quickSortTS.hpp">
+		<Unit filename="C:/Users/pasyj/Documents/edgent/SuccinctEdgePrivate/quickSortTS.hpp">
 			<Option target="SuccinctEdge_cata"/>
 		</Unit>
-		<Unit filename="/Users/xu/Documents/Doctorat/git_workplace/SuccinctEdge_sensors_new/CMakeLists.txt">
+		<Unit filename="C:/Users/pasyj/Documents/edgent/SuccinctEdgePrivate/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>

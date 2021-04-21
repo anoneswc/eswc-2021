@@ -1,4 +1,4 @@
-SELECT ?X ?TimeStamp ?Value[AVG] ?Unit [RANGE 5000 MS STEP 1000 MS] WHERE {
+SELECT ?X ?TimeStamp ?Value ?Unit WHERE {
 	?X <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/sosa#Observation> .
 	?X <http://qudt.org/schema/qudt#resultTime> ?TimeStamp .
 	?X <http://www.w3.org/ns/sosa#hasResult> ?Y .

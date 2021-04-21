@@ -16,20 +16,25 @@ void dataWindowControl(RDFStorage &test, mutex &data_update_lock, long& window_s
 
     while(!(stop_signal)){
         if(mode == SLIDING){
+            /*
             while(test.get_data_head_tail_difference_with_index(0) > window_size){
 
                 test.drop_numeric_data(data_update_lock);
                 //cout << "difference: " << test.get_data_head_tail_difference_with_index(0) << endl;
-            }
+            }*/
+            test.check_windows_and_drop_data(window_size, data_update_lock);
+
         }else if(mode == TUMBLING){
             //cout << test.get_data_head_tail_difference_with_index(0) << " " << window_size << endl;
+            /*
             if(test.get_data_head_tail_difference_with_index(0) > window_size){
                 tumbling_out_flag = true;
                 while(tumbling_out_flag){
                     //usleep(100);
                 }
                 test.drop_all_numeric_data(data_update_lock);
-            }
+            }*/
+            test.check_windows_and_drop_all_data(window_size,data_update_lock, tumbling_out_flag);
         }
 
 

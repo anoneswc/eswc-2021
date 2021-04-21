@@ -615,10 +615,18 @@ void DataTypeStore::drop_data() {
     }
 }
 
+void DataTypeStore::drop_data_with_index(long index) {
+    vec_ele2_data[index].remove_element();
+}
+
 void DataTypeStore::drop_all_data() {
     for(auto i = vec_ele2_data.begin(); i != vec_ele2_data.end(); ++i){
         i->remove_all_element();
     }
+}
+
+void DataTypeStore::drop_all_data_with_index(long index) {
+    vec_ele2_data[index].remove_all_element();
 }
 
 void DataTypeStore::change_mode(int index, data_function function) {

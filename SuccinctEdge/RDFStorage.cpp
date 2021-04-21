@@ -754,8 +754,28 @@ bool RDFStorage::more_selective(vector<string>& first, vector<string>& second){
 }*/
 
 bool RDFStorage::more_selective(vector<string>& first, vector<string>& second){
+    /*
     unsigned long long first_num, second_num;
     if(selectivity(first) < selectivity(second)){
+        return true;
+    }else if(selectivity(first) > selectivity(second)){
+        return false;
+    }else if(first[1][0] != '?' && second[1][0] != '?'){
+        if((first_num = (first[1] == RDF_TYPE? num_rdftype_triples(first):num_predicate_triples(first[1]))) < (second_num = (second[1] == RDF_TYPE? num_rdftype_triples(second):num_predicate_triples(second[1]))))
+            return true;
+        else
+            return false;
+    }else{
+        return false;
+    }
+    */
+
+    unsigned long long first_num, second_num;
+    if(first[1] == RDF_TYPE && second[1] != RDF_TYPE){
+        return true;
+    }else if(first[1] != RDF_TYPE && second[1] == RDF_TYPE){
+        return false;
+    }else if(selectivity(first) < selectivity(second)){
         return true;
     }else if(selectivity(first) > selectivity(second)){
         return false;
@@ -782,28 +802,37 @@ vector<string> RDFStorage::find_first_triple_pattern(vector<vector<string>>& que
     return first_tp;
 }
 
-bool RDFStorage::has_binding(JoinVariables& variables, vector<string>& tp){
-    for(auto i:tp)
-        if(variables.contains(i))
-            return true;
-    return false;
+int RDFStorage::has_binding(JoinVariables& variables, vector<string>& tp){
+    for(auto i=0; i < tp.size(); ++i)
+        if(variables.contains(tp[i]))
+            return i;
+    return -1;
 }
 
 vector<string> RDFStorage::find_next_triple_pattern(JoinVariables& variables, vector<vector<string>>& query_table){
     vector<string> next_tp;
     long id = -1;
     bool trig = false;
+    bool s_bind = false;
+    int bind_num = -1;
 
     for(unsigned long i = 0; i < query_table.size(); ++i){
-        if(has_binding(variables, query_table[i])){
+        if(has_binding(variables, query_table[i]) >= 0){
             if(trig){
-                if(!more_selective(next_tp, query_table[i])){
-                    next_tp = query_table[i];
-                    id = i;
+                if(!s_bind || (s_bind && (query_table[i][0][0] == '?' && query_table[i][2][0] != '?'? true:false))){
+                    if(has_binding(variables, query_table[i]) <= bind_num && !more_selective(next_tp, query_table[i])){
+                        next_tp = query_table[i];
+                        id = i;
+
+                        s_bind = query_table[i][0][0] == '?' && query_table[i][2][0] != '?'? true:false;
+                        bind_num = has_binding(variables, query_table[i]);
+                    }
                 }
             }else{
                 trig = true;
                 next_tp = query_table[i];
+                s_bind = query_table[i][0][0] == '?' && query_table[i][2][0] != '?'? true:false;
+                bind_num = has_binding(variables, query_table[i]);
                 id = i;
             }
         }

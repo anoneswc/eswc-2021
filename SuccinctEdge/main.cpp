@@ -150,7 +150,7 @@ int main(int argc, char* argv[]) {
     cout << '\n' << "\n" ;
 */
 
-
+/*
 
         if (argc < 4) {
             cout << "Usage: triple_store data_path query_path storage_path tbox_path reason show_result" << endl;
@@ -170,7 +170,7 @@ int main(int argc, char* argv[]) {
 
 
 
-/*
+*/
 
     char* data_path = argv[1];
     char* query_path = argv[2];
@@ -191,9 +191,16 @@ int main(int argc, char* argv[]) {
     if(argc > 8){
         mini_batch = (argv[8][0] == 't' || argv[8][0] == 'T')? true:false;
     }
+    
+    bool server = false;
+    if(argc > 9){
+        server = (argv[9][1] == 's')? true:false;
+    }
 
-*/
+    string mode = (server)? "Server":"Client";
 
+    cout << "Running as " + mode << endl;
+    run_tcp_receiver(server);
 
         clock_t start, end;
 
@@ -213,6 +220,8 @@ int main(int argc, char* argv[]) {
         string str_tbox(tbox_path);
 
         RDFStorage test(str_tbox, abox_file, PSO);
+        string topic_file = "test_topic_map/topic_map.txt";
+        test.init_topic_cols_map(topic_file);
         end = clock();
 
         string inp;
@@ -241,8 +250,6 @@ int main(int argc, char* argv[]) {
 
         //vector<double> data{103324, 18.015, 3.4569};
         //test.insert_numeric_data(data);
-        run_tcp_receiver();
-        sleep(1);
 
         bool data_window_thread_stop = false;
         bool tumbling_out_flag = false;
@@ -251,7 +258,7 @@ int main(int argc, char* argv[]) {
         long long sliding_step = 1000;
         //test.all_change_data_mode(MAX);
 
-    vector<long> data_indexes = test.get_indexes_with_data_names(columns);
+    //vector<long> data_indexes = test.get_indexes_with_data_names(columns);
 
 
     //Lance data window control thread
@@ -260,21 +267,46 @@ int main(int argc, char* argv[]) {
 
     data_function mini_batch_mode = NONE;
 
-
-    ifstream query_file;
-
-        query_file.open(query_path);
-
-
         vector<string> query_strings;
-
         vector<string> list_data_variables;
         vector<data_function> list_data_mode;
+        vector<vector<string>> queries_list;
+        vector<string> queries = {};
+        vector<string> tmp = {};
+        if(server){
+            ifstream query_file;
+            string str;
 
-        while (!query_file.eof()) {
+            query_file.open(query_path);
+            while (!query_file.eof()){
+                getline(query_file, str);
+                if(str.size() == 0 && tmp.size() > 0) {
+                    queries_list.push_back(tmp);
+                    tmp = {};
+                }
+                else{
+                    tmp.push_back(str);
+                }
+            }
+            if(tmp.size() > 0) 
+                queries_list.push_back(tmp);
+            for(auto tmp : queries_list){
+                transmit_query(tmp, {});
+                // Empty id list means every client accepts the query
+                // Otherwise if it's id is in the list, the client runs the query
+            }
+        }
+        else{
+            cout << "Waiting for Query" << endl;
+            queries = getQueries();
+            cout << "Received Query" << endl;
+        }
+        int i = 0;
+        while(i < queries.size()) {
             string tmp;
-            getline(query_file, tmp);
-            cout << tmp << endl;
+            tmp = queries.at(i);
+            i+=1;
+            //cout << tmp << endl;
             if(tmp[0] == 's' || tmp[0] == 'S'){
                 istringstream is(tmp);
                 string clause_select;
@@ -383,6 +415,7 @@ int main(int argc, char* argv[]) {
             }else if (tmp[0] == '\t')
                 query_strings.push_back(tmp);
             else if (tmp[0] == '}') {
+                cout << "Finished Reading" << endl;
                 JoinVariables variables;
                 list<JoinLine> res_table;
                 start = clock();
@@ -406,60 +439,79 @@ int main(int argc, char* argv[]) {
 
                 while (true){
 
-                    for(auto i: getCSV()){
-                        if(!mini_batch) {
-                            vector<double> data_line;
-                            for (auto j:i) {
-                                //cout << j << " ";
-                                data_line.push_back(std::stod(erase_head(j)));
-                            }
-
-                            test.insert_numeric_data(data_indexes, data_line, data_update_lock);
-
-                            if (show_result) {
-                                if (window_mode == TUMBLING) {
-                                    //cout << "flag: " << tumbling_out_flag << endl;
-                                    if (tumbling_out_flag == true) {
-                                        showResults(test, variables, res_table);
-                                        tumbling_out_flag = false;
-                                    }
-                                } else {
-                                    //cout << "step: " << sliding_step << " " << std::chrono::system_clock::now().time_since_epoch() /std::chrono::milliseconds(1) << " " << step_timer << endl;
-                                    long long time_now = std::chrono::system_clock::now().time_since_epoch() /std::chrono::milliseconds(1);
-                                    if(time_now - step_timer >= sliding_step){
-                                        showResults(test, variables, res_table);
-                                        step_timer = time_now;
-                                    }
-                                }
-
-                            }
-                        }else{
-
-                            if(i[0][1] != 'e') {
+                    for(tuple<string, vector<vector<string>>> tuple: getCSV()){
+                        vector<vector<string>> table;
+                        string sensor;
+                        std::tie(sensor, table) = tuple;
+                        
+                        for(auto i : table){
+                            
+                            if(!mini_batch) {
                                 vector<double> data_line;
+                                
                                 for (auto j:i) {
-                                    //cout << j << " ";
-                                    data_line.push_back(std::stod(erase_head(j)));
+                                    //cout << j << endl;
+                                    data_line.push_back(std::stod(j));
                                 }
-                                mini_batch_data_window.push_back(data_line);
+                                //test.insert_numeric_data(data_indexes, data_line, data_update_lock);
+
+                                test.insert_numeric_data_with_topic(sensor, data_line, data_update_lock);
+
+                                
+                                if (show_result) {
+                                    if (window_mode == TUMBLING) {
+                                        //cout << "flag: " << tumbling_out_flag << endl;
+                                        if (tumbling_out_flag == true) {
+                                            if(server)
+                                                showResults(test, variables, res_table);
+                                            else
+                                                sendResults(test, variables, res_table);
+                                            tumbling_out_flag = false;
+                                        }
+                                    } else {
+                                        //cout << "step: " << sliding_step << " " << std::chrono::system_clock::now().time_since_epoch() /std::chrono::milliseconds(1) << " " << step_timer << endl;
+                                        long long time_now = std::chrono::system_clock::now().time_since_epoch() /std::chrono::milliseconds(1);
+                                        if(time_now - step_timer >= sliding_step){
+                                            if(server)
+                                                showResults(test, variables, res_table);
+                                            else
+                                                sendResults(test, variables, res_table);
+                                            step_timer = time_now;
+                                        }
+                                    }
+
+                                }
                             }else{
-                                vector<double> mini_batch_result = calculate_mini_batch(mini_batch_data_window, mini_batch_mode);
-                                test.insert_numeric_data(data_indexes, mini_batch_result, data_update_lock);
 
-                                if (show_result){
-                                    showResults(test, variables, res_table);
+                                if(i[0][1] != 'e') {
+                                    vector<double> data_line;
+                                    for (auto j:i) {
+                                        //cout << j << " ";
+                                        data_line.push_back(std::stod(j));
+                                    }
+                                    mini_batch_data_window.push_back(data_line);
+                                }else{
+                                    vector<double> mini_batch_result = calculate_mini_batch(mini_batch_data_window, mini_batch_mode);
+                                    //test.insert_numeric_data(data_indexes, mini_batch_result, data_update_lock);
+                                    test.insert_numeric_data_with_topic(sensor, mini_batch_result, data_update_lock);
+                                    if (show_result){
+                                        if(server)
+                                            showResults(test, variables, res_table);
+                                        else
+                                            sendResults(test, variables, res_table);
+                                    }
+                                    long long time = std::chrono::system_clock::now().time_since_epoch() /std::chrono::milliseconds(1);
+                                    cout << "latency: " << time - time_reception << endl;
+                                    //cout << "mini batch size: " << mini_batch_data_window.size() << endl;
+                                    mini_batch_data_window.clear();
                                 }
-                                long long time = std::chrono::system_clock::now().time_since_epoch() /std::chrono::milliseconds(1);
-                                cout << "latency: " << time - time_reception << endl;
-                                //cout << "mini batch size: " << mini_batch_data_window.size() << endl;
-                                mini_batch_data_window.clear();
                             }
+
+
+
                         }
-
-
-
+                        usleep(10);
                     }
-                    usleep(10);
                 }
 
 
